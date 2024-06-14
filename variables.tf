@@ -32,40 +32,35 @@ variable "admin_users" {
 variable "gitignore_template" {
   type        = string
   description = "gitignore file to use"
-  nullable    = true
-  default     = null
-  validation {
-    condition = (
-      var.gitignore_template == null ||
-      contains([
-        "AL",
-        "Actionscript",
-        "Android",
-        "Autotools",
-        "C++",
-        "C",
-        "CFWheels",
-        "CMake",
-        "Composer",
-        "GitHubPages",
-        "Go",
-        "Godot",
-        "Haskell",
-        "Laravel",
-        "Magento",
-        "Node",
-        "Python",
-        "Sass",
-        "Scala",
-        "Scheme",
-        "Swift",
-        "Symfony",
-        "Terraform",
-        "Unity",
-        "WordPress",
-        "ZendFramework",
-      ], var.gitignore_template)
-    )
-    error_message = "The gitignore_template must be from https://github.com/github/gitignore"
-  }
+#   validation {
+#     condition = contains([
+#       "AL",
+#       "Actionscript",
+#       "Android",
+#       "Autotools",
+#       "C++",
+#       "C",
+#       "CFWheels",
+#       "CMake",
+#       "Composer",
+#       "GitHubPages",
+#       "Go",
+#       "Godot",
+#       "Haskell",
+#       "Laravel",
+#       "Magento",
+#       "Node",
+#       "Python",
+#       "Sass",
+#       "Scala",
+#       "Scheme",
+#       "Swift",
+#       "Symfony",
+#       "Terraform",
+#       "Unity",
+#       "WordPress",
+#       "ZendFramework",
+#     ], var.gitignore_template)
+#     error_message = "The gitignore_template must be from https://github.com/github/gitignore"
+#   }
 }
